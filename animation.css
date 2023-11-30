@@ -1,0 +1,83 @@
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fill1 {
+  0% {
+    width: 0px;
+    height: 0px;
+    background-color: #140741;
+  }
+  95% {
+    width: 160px;
+    height: 160px;
+    opacity: 0.8;
+    background-color: #140741;
+  }
+  100% {
+    width: 170px;
+    height: 170px;
+    opacity: 0.5;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #050210;
+}
+
+.container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-image: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+  animation-name: rotation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.container::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  background-position: center center;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5)) blur(30px);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.fixedCircle {
+  width: 170px;
+  height: 170px;
+  background-color: #050210;
+  border-radius: 50%;
+}
+.circle {
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  background-color: #050210;
+  border-radius: 50%;
+  animation-name: fill1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+#circle2 {
+  animation-delay: 1s;
+}
