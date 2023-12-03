@@ -1,0 +1,62 @@
+:root {
+  --backgroundImageColor: rgb(54, 104, 212);
+  --descriptionColor: aliceblue;
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 50px 15px;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--backgroundImageColor);
+  border: 2px solid grey;
+  border-radius: 10px;
+  max-width: 150px;
+}
+
+.gallery img {
+  max-width: 150px;
+}
+
+.desc {
+  background-color: var(--descriptionColor);
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+}
+
+.text {
+  margin-top: 20px;
+}
+
+/* These are the rules for tablet */
+
+@media all and (min-width: 481px) and (max-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+
+/* These are the rules for mobile phone */
+
+@media all and (max-width: 480px) {
+  .container {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
