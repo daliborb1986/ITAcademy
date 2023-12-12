@@ -1,0 +1,46 @@
+body {
+  font-family: "Oswald", sans-serif;
+}
+
+/*************Hero section******************/
+
+#hero-section {
+  background-image: url(./imgs/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 600px;
+  margin: 0;
+}
+.text {
+  position: relative;
+  top: 115px;
+  background-color: #31c287;
+  padding: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.info {
+  /* border-bottom: 1px solid grey; */
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.menu-img {
+  max-width: 20px;
+  margin-right: 15px;
+}
+.navbar-toggler {
+  border: none;
+}
+.menu-txt {
+  position: relative;
+  top: 2px;
+}
+.img-description {
+  color: grey;
+}
+
+.dark-bg {
+  background-color: #353232;
+  color: white;
+}
